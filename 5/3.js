@@ -9,18 +9,30 @@
 */
 
 const products = [
-  {
-    id: 3,
-    price: 200,
-  },
-  {
-    id: 4,
-    price: 900,
-  },
-  {
-    id: 1,
-    price: 1000,
-  },
+    {
+        id: 3,
+        price: 200,
+    },
+    {
+        id: 4,
+        price: 900,
+    },
+    {
+        id: 1,
+        price: 1000,
+    },
 ];
+/*
+деструктурировал массив объектов,
+для вывода в консоль копий изначального состояния этих объектов
+ */
+for (const {id, price} of products) {
+    console.log(`id : ${id},price : ${price}`);
+}
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+for (const productsKey of products) {
+    productsKey.price *= 0.85;
+}
+console.log(products)
+
+
